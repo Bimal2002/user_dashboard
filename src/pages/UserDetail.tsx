@@ -20,7 +20,7 @@ const UserDetail: React.FC = () => {
   
   const [userError, setUserError] = useState<string | null>(null);
   const [activitiesError, setActivitiesError] = useState<string | null>(null);
-  const [usersError, setUsersError] = useState<string | null>(null);
+//   const [usersError, setUsersError] = useState<string | null>(null);
 
   // Fetch all users for navigation
   useEffect(() => {
@@ -29,9 +29,9 @@ const UserDetail: React.FC = () => {
         setIsLoadingUsers(true);
         const userData = await fetchUsers();
         setUsers(userData);
-        setUsersError(null);
+        // setUsersError(null);
       } catch (error) {
-        setUsersError(error instanceof Error ? error.message : 'An unknown error occurred');
+        // setUsersError(error instanceof Error ? error.message : 'An unknown error occurred');
       } finally {
         setIsLoadingUsers(false);
       }
